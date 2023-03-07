@@ -1,0 +1,18 @@
+import React from 'react'
+import NavBar from '../components/nav/NavActive'
+import SearchBar from '../components/SearchBar'
+import CompaniesBody from '../components/Companies/CompaniesBody'
+import Footer from '../components/Footer'
+
+const CompaniesPage = () => {
+  return (
+    <div>
+      <NavBar />
+      <SearchBar />
+      <CompaniesBody/>
+      <Footer/>
+    </div>
+  )
+}
+
+export default CompaniesPage

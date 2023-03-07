@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+  }
+  a{
+    text-decoration: none;
+    color: var(--white);
+    cursor: pointer;
+  }
+
+}
+
+@layer components{
+  .btn{
+    @apply rounded-full px-5 py-1.5;
+  }
+  .access-btn{
+    @apply w-full rounded-full bg-transparent text-orange border border-orange font-semibold p-2 text-sm cursor-pointer flex justify-center items-center gap-1;
+  }
+  .social-media-icon{
+    @apply bg-orange rounded-lg p-2 hover:bg-navy-blue;
+  }
+}
+
+@layer utilities{
+  .link-hover{
+    @apply hover:border-b-2 hover:border-orange transition
+  }
+}
+
+:root{
+  --dark-grey: #747474;
+  --blue: #030029;
+  --grey: #ADADAD;
+  --ash1: #E5E5E5;
+  --ash2: #F8F8F8;
+  --orange: #F37821;
+  --orange-80: rgba(243, 120, 33, 0.8);
+  --orange-60: rgba(243, 120, 33, 0.6);
+  --orange-40: rgba(243, 120, 33, 0.4);
+  --orange-20: rgba(243, 120, 33, 0.2);
+  --navy-blue: #262262;
+  --navy-blue-80: rgba(38, 34, 98, 0.8);
+  --navy-blue-60: rgba(38, 34, 98, 0.6);
+  --navy-blue-40: rgba(38, 34, 98, 0.4);
+  --navy-blue-20: rgba(38, 34, 98, 0.2);
+  --navy-blue-10: rgba(38, 34, 98, 0.1);
+  --white: #FFFFFF;
+}
