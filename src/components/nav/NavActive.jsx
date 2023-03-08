@@ -84,7 +84,7 @@ const Nav = () => {
           <div className=" flex items-center gap-2 cursor-pointer">
             <FontAwesomeIcon icon={faBriefcase} className=" text-dark-grey" />
             {/* <Link to=''> */}
-              <p className=" font-semibold text-blue">My Jobs</p>
+            <p className=" font-semibold text-blue">My Jobs</p>
             {/* </Link> */}
           </div>
           <div className=" flex items-center gap-2 cursor-pointer">
@@ -96,7 +96,7 @@ const Nav = () => {
 
       {/* Mobile links */}
       <div className="hidden bg-blue justify-between px-12 py-5 items-center text-xs md:flex lg:px-5 lg:text-base">
-        <div className="w-1/6 lg:w-2/5 lg:z-20">
+        <div className="w-1/6 lg:w-2/5 lg:z-50">
           <Link to="/" className="w-1/12">
             <img
               src={logo}
@@ -132,25 +132,34 @@ const Nav = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-2">
-            <FontAwesomeIcon
-              icon={faMessage}
-              className=" bg-white rounded-full p-2 text-blue"
-            />
-            <FontAwesomeIcon
-              icon={faBell}
-              className=" bg-white rounded-full p-2 text-blue"
-            />
-            <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
-              <img src={ProfilePicture} alt="" />
+          <div className="flex flex-col items-center gap-5">
+            <div className=" flex gap-2 items-center">
+              {/* <FontAwesomeIcon
+                icon={faMessage}
+                className=" bg-white rounded-full p-2 text-blue"
+              /> */}
+              <p className=" text-white">Messages</p>
             </div>
+            <div className=" flex gap-2 items-center">
+              {/* <FontAwesomeIcon
+                icon={faBell}
+                className=" bg-white rounded-full p-2 text-blue"
+              /> */}
+              <p className=" text-white">Notifications</p>
+            </div>
+            <Link to="/engineerprofile" className=" flex gap-2 items-center">
+              {/* <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
+                <img src={ProfilePicture} alt="" />
+              </div> */}
+              <p>Profile</p>
+            </Link>
           </div>
         </div>
 
         {/* <FontAwesomeIcon icon={openNav ? faClose : faBars} onClick={()=>{setOpenNav(!openNav);}} /> */}
 
         <FontAwesomeIcon
-          className="hidden lg:block z-20 text-xl text-orange"
+          className="hidden lg:block z-20 text-2xl text-orange"
           icon={openNav ? faClose : faBars}
           onClick={() => {
             setOpenNav(!openNav);
