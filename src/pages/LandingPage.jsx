@@ -8,6 +8,7 @@ import Companies from "../components/LandingPage/Companies";
 import Footer from "../components/Footer";
 
 const LandingPage = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <NavBar />

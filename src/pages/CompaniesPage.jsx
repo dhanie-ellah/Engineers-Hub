@@ -5,6 +5,7 @@ import CompaniesBody from '../components/Companies/CompaniesBody'
 import Footer from '../components/Footer'
 
 const CompaniesPage = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <NavBar />

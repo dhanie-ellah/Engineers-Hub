@@ -4,6 +4,7 @@ import CreateAccountBody from '../components/CreateCompanyAccount/CreateAccountB
 import Footer from '../components/Footer'
 
 const CreateAccount = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <NavBar />

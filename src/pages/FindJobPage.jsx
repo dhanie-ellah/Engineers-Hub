@@ -5,6 +5,7 @@ import FindJobsBody from '../components/FindJobs/FindJobsBody'
 import Footer from '../components/Footer'
 
 const FindJobPage = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <NavActive />

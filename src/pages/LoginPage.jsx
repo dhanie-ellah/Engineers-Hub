@@ -5,6 +5,7 @@ import LoginForm from '../components/forms/LoginForm'
 import Footer from '../components/Footer'
 
 const loginPage = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <Nav />

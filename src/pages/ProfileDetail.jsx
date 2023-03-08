@@ -5,6 +5,7 @@ import Profiledetail from '../components/EngineersProfile/Profiledetail'
 import Footer from '../components/Footer'
 
 const ProfileDetail = () => {
+  window.scroll(0, 0);
   return (
     <div>
       <Nav />
