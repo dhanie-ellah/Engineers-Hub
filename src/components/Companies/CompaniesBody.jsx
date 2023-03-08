@@ -8,8 +8,8 @@ import CompanyPicture from '../../assets/CompanyPicture.png'
 
 const CompaniesBody = () => {
   return (
-    <div className=" w-[80%] m-auto flex gap-5">
-      <div className=" w-1/2 flex flex-wrap gap-[4%]">
+    <div className=" w-[80%] m-auto flex gap-5 md:w-[90%] md:flex-col">
+      <div className=" w-1/2 flex flex-wrap gap-[4%] md:w-full">
         <CompanyProfileCard
           companyprofilecover={ProfileCover}
           companyprofilephoto={Chevron}
@@ -81,7 +81,7 @@ const CompaniesBody = () => {
           year="2022"
         />
       </div>
-      <div className=" w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-5">
+      <div className=" w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-5 md:w-full">
         <CompanyCard />
         <CompanyCard CompanyPicture={CompanyPicture} />
         <CompanyCard CompanyPicture={CompanyPicture} />
