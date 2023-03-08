@@ -7,7 +7,7 @@ import chevron from '../../assets/chevron.png'
 
 const TopCompanies = () => {
   return (
-    <div className="w-1/2 md:w-full">
+    <div className="w-1/2 lg:w-full">
       <h1 className=" text-center text-3xl text-blue font-semibold mb-5">
         Top Companies
       </h1>

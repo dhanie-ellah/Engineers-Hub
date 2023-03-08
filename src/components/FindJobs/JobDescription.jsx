@@ -14,7 +14,7 @@ const JobDescription = ({
   others,
 }) => {
   return (
-    <div className=" w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit md:w-full text-xs">
+    <div className=" w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit lg:w-full text-xs">
       <p>
         <b>Job Details</b> • Posted 4 Days ago
       </p>

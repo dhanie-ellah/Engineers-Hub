@@ -13,8 +13,8 @@ const ProfileDetail = () => {
       <h1 className=" text-center text-2xl text-blue font-medium">
         Top Engineers
       </h1>
-      <div className=" w-[80%] m-auto p-5 flex gap-10 md:w-[90%] px-0 md:flex-col-reverse">
-        <div className=" w-1/2 flex flex-wrap gap-[4%] md:w-full">
+      <div className=" w-[80%] m-auto p-5 flex gap-10 lg:w-[90%] px-0 lg:flex-col-reverse">
+        <div className=" w-1/2 flex flex-wrap gap-[4%] lg:w-full">
           <ProfileCard
             profilecover={ProfileCover}
             profilephoto={ProfilePicture}
@@ -64,7 +64,7 @@ const ProfileDetail = () => {
             year="2022"
           />
         </div>
-        <div className=" w-1/2 rounded-3xl overflow-hidden pb-8 h-fit md:w-full">
+        <div className=" w-1/2 rounded-3xl overflow-hidden pb-8 h-fit lg:w-full">
           <div className=" w-full h-[200px] overflow-hidden">
             <img src={CoverPhoto} alt="" className="w-full" />
           </div>

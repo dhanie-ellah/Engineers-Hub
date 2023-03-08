@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const JobList = () => {
   return (
-    <div className="w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit md:w-full">
+    <div className="w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit lg:w-full">
       <div className=" flex flex-col gap-[25px]">
         <JobCard
           title="IT Training - Centre Manager"

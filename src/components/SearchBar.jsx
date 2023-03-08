@@ -7,7 +7,7 @@ const SearchBar = () => {
   
   return (
     <form className="flex items-center justify-center gap-3 p-5 md:px-3 md:gap-1.5">
-      <div className="flex gap-2 items-center border border-dark-grey rounded-full py-[8px] px-3 relative w-[30%] md:w-[80%]">
+      <div className="flex gap-2 items-center border border-dark-grey rounded-full py-[8px] px-3 relative w-[30%] lg:w-[80%]">
         <FontAwesomeIcon icon={faSearch} className=" text-dark-grey text-sm" />
         <input
           type="text"

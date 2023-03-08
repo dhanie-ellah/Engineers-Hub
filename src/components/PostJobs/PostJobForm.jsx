@@ -4,7 +4,7 @@ import Textbox from '../Textbox'
 
 const PostJobForm = () => {
   return (
-    <form className=" w-1/2 flex flex-col gap-4 md:w-full">
+    <form className=" w-1/2 flex flex-col gap-4 lg:w-full">
       <h1 className=" text-2xl text-blue font-medium">Post a Job</h1>
       <p className=" text-xs text-dark-grey">
         Fill in details you want applicants to see before applying for this job

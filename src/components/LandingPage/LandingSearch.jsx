@@ -4,8 +4,8 @@ import InputField from "../InputField";
 
 const LandingSearch = () => {
   return (
-    <div className="p-10 w-4/5 m-auto flex justify-between items-center md:flex-col-reverse md:w-full md:p-5 md:gap-2">
-      <div className="w-6/12 flex flex-col gap-1 px-12 py-5 md:w-full md:px-0">
+    <div className="p-10 w-4/5 m-auto flex justify-between items-center md:flex-col-reverse lg:w-[90%] lg:p-5 lg:gap-5 md:gap-2">
+      <div className="w-6/12 flex flex-col gap-1 px-12 py-5 lg:w-7/12 lg:px-0 md:w-full md:px-0">
         <h1 className="text-blue text-5xl font-semibold">
           The Engineers Community
         </h1>
@@ -23,7 +23,7 @@ const LandingSearch = () => {
         />
       </div>
 
-      <div className="w-4/12 relative flex items-center justify-center md:w-full">
+      <div className="w-4/12 relative flex items-center justify-center md:w-full lg:w-5/12">
         <img
           className="w-full flex items-center justify-center"
           src={landingSearch}

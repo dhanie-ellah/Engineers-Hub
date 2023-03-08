@@ -3,7 +3,7 @@ import JobCard from '../JobCard'
 
 const JobList = () => {
   return (
-    <div className="w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit md:w-full">
+    <div className="w-1/2 bg-ash2 rounded-lg p-4 flex flex-col gap-4 h-fit lg:w-full">
       <p className=' text-dark-grey text-xs text-center'>Jobs based on your profile • Updated 10 min ago</p>
       <div className=" flex flex-col gap-[25px]">
         <JobCard

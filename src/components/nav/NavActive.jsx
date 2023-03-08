@@ -13,7 +13,7 @@ const Nav = () => {
   return (
     <nav className=" z-10">
       {/* Desktop navbar */}
-      <div className="flex bg-blue justify-between px-[120px] py-5 items-center text-xs lg:hidden">
+      <div className="flex bg-blue justify-between px-[120px] py-5 items-center lg:px-5 md:px-[120px] text-xs md:hidden">
         <div className="w-1/6 z-20">
           <Link to="/" className="w-1/12">
             <img src={logo} alt="Engineer's hub logo" className="w-full" />
@@ -71,7 +71,7 @@ const Nav = () => {
         <div
           className={`${
             dropDown ? "flex" : "hidden"
-          } flex-col gap-5 items-center bg-white rounded-lg p-5 absolute right-[100px] top-[75px] z-20`}
+          } flex-col gap-5 items-center bg-white rounded-lg p-5 absolute right-[100px] top-[75px] lg:right-[25px] z-20`}
         >
           <div className=" flex items-center gap-2 cursor-pointer">
             <div className=" w-[20px] h-[20px] rounded-full overflow-hidden border-dark-grey">
@@ -95,7 +95,7 @@ const Nav = () => {
       </div>
 
       {/* Mobile links */}
-      <div className="hidden bg-blue justify-between px-12 py-5 items-center text-xs lg:flex lg:px-5 lg:text-base">
+      <div className="hidden bg-blue justify-between px-12 py-5 items-center text-xs md:flex lg:px-5 lg:text-base">
         <div className="w-1/6 lg:w-2/5 lg:z-20">
           <Link to="/" className="w-1/12">
             <img

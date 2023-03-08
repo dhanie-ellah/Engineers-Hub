@@ -5,11 +5,11 @@ import JobDescription from "./JobDescription";
 
 const FindJobsBody = () => {
   return (
-    <div className=" px-[75px] m-auto py-10 md:py-5 relative md:px-3">
+    <div className=" px-[75px] m-auto py-10 md:py-5 relative lg:px-[50px] md:px-3">
       <h1 className=" text-3xl text-blue text-center font-bold pb-5">
         Hiring Now
       </h1>
-      <div className=" flex gap-5 md:flex-col-reverse">
+      <div className=" flex gap-5 lg:flex-col-reverse">
         <JobList />
         <JobDescription
           title="IT Training – Centre Manager"

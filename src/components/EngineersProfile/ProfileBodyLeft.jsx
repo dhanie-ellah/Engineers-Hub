@@ -5,7 +5,7 @@ import Input from "../DynamicInput";
 
 const ProfileBodyLeft = () => {
   return (
-    <div className=" w-1/2 border-[1.5px] border-dark-grey rounded-3xl overflow-hidden pb-8 h-fit md:w-full">
+    <div className=" w-1/2 border-[1.5px] border-dark-grey rounded-3xl overflow-hidden pb-8 h-fit lg:w-full">
       <div className=" w-full h-[200px] overflow-hidden">
         <img src={CoverPhoto} alt="" className="w-full" />
       </div>

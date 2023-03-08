@@ -9,7 +9,7 @@ import uzoamaka from '../../assets/uzoamaka.jpeg'
 
 const TopEngineers = () => {
   return (
-    <div className="w-1/2 md:w-full">
+    <div className="w-1/2 lg:w-full">
       <h1 className=" text-center text-3xl text-blue font-semibold mb-5">
         Top Engineers
       </h1>

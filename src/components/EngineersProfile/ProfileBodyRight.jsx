@@ -11,7 +11,7 @@ const ProfileBodyRight = () => {
   const [isSkills, setIsSkills] = useState(false)
 
   return (
-    <div className=" w-1/2 flex flex-col gap-3 md:w-full">
+    <div className=" w-1/2 flex flex-col gap-3 lg:w-full">
       {/* about me */}
       <form className=" flex flex-col gap-5">
         {/* about me header */}
