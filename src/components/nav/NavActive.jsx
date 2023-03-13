@@ -11,7 +11,7 @@ const Nav = () => {
   const [dropDown, setDropDown] = useState(false);
 
   return (
-    <nav className=" z-10">
+    <nav className=" z-10 sticky top-0">
       {/* Desktop navbar */}
       <div className="flex bg-blue justify-between px-[120px] py-5 items-center lg:px-5 md:px-[120px] text-xs md:hidden">
         <div className="w-1/6 z-20">
