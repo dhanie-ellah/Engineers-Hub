@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../components/nav/NavActive'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/SearchBar/SearchBar'
 import CompaniesBody from '../components/Companies/CompaniesBody'
 import Footer from '../components/Footer'
 
@@ -10,10 +10,10 @@ const CompaniesPage = () => {
     <div>
       <NavBar />
       <SearchBar />
-      <CompaniesBody/>
-      <Footer/>
+      <CompaniesBody />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default CompaniesPage

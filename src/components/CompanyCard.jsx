@@ -8,7 +8,7 @@ const CompanyCard = ({ CompanyPicture }) => {
   return (
     <div className="flex flex-col gap-3 w-full p-5 shadow-lg cursor-pointer bg-white rounded-lg md:flex-col">
       <button
-        className={`${isFollowing?'bg-orange text-white':''} w-fit text-center rounded-full border border-orange font-semibold text-orange text-sm p-2 px-14`}
+        className={`${isFollowing?'bg-orange text-[#fff]':''} w-fit text-center rounded-full border border-orange font-semibold text-orange text-sm p-2 px-14`}
         onClick={() => {
           setIsFollowing(!isFollowing);
         }}

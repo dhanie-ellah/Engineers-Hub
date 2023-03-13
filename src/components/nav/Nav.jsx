@@ -9,7 +9,7 @@ const Nav = () => {
   const [openNav, setOpenNav] = useState(false)
 
   return (
-    <nav className='z-10'>
+    <nav className='z-10 sticky top-0'>
       {/* Desktop navbar */}
       <div className="flex bg-blue justify-between px-[120px] py-5 items-center text-xs lg:hidden">
         <div className="w-1/6 z-20">

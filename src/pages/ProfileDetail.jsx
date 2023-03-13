@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../components/nav/NavActive'
-import SearchBar from '../components/SearchBar'
+import SearchBar from '../components/SearchBar/SearchBar'
 import Profiledetail from '../components/EngineersProfile/Profiledetail'
 import Footer from '../components/Footer'
 
