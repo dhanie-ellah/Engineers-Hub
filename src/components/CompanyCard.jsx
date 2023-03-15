@@ -8,14 +8,16 @@ const CompanyCard = ({ CompanyPicture }) => {
   return (
     <div className="flex flex-col gap-3 w-full p-5 shadow-lg cursor-pointer bg-white rounded-lg md:flex-col">
       <button
-        className={`${isFollowing?'bg-orange text-[#fff]':''} w-fit text-center rounded-full border border-orange font-semibold text-orange text-sm p-2 px-14`}
+        className={`${
+          isFollowing ? "bg-orange text-[#fff]" : ""
+        } w-fit text-center rounded-full border border-orange font-semibold text-orange text-sm p-2 px-14`}
         onClick={() => {
           setIsFollowing(!isFollowing);
         }}
       >
         {isFollowing ? "Following" : "Follow"}
       </button>
-      <header className="flex items-center justify-between">
+      <header className="flex items-center justify-between lg:gap-2">
         <div className=" w-[45px] h-[45px] rounded-full overflow-hidden">
           <img src={chevron} alt="" />
         </div>

@@ -3,8 +3,17 @@ import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faBars, faBell, faBriefcase, faClose, faGear, faMessage } from "@fortawesome/free-solid-svg-icons";
-import ProfilePicture from '../../assets/Ellipse 47.png'
+import {
+  faAngleDown,
+  faBars,
+  faBell,
+  faBriefcase,
+  faClose,
+  faGear,
+  faMessage,
+  faTent,
+} from "@fortawesome/free-solid-svg-icons";
+import ProfilePicture from "../../assets/shell.png";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -71,25 +80,39 @@ const Nav = () => {
         <div
           className={`${
             dropDown ? "flex" : "hidden"
-          } flex-col gap-5 items-center bg-white rounded-lg p-5 absolute right-[100px] top-[75px] lg:right-[25px] z-20`}
+          } flex-col gap-5 bg-white rounded-lg p-5 absolute right-[100px] top-[75px] lg:right-[25px] z-20 shadow-md`}
         >
-          <div className=" flex items-center gap-2 cursor-pointer">
-            <div className=" w-[20px] h-[20px] rounded-full overflow-hidden border-dark-grey">
+          <Link
+            to="/engineerprofile"
+            className=" flex items-center gap-2 cursor-pointer"
+          >
+            <div className=" w-[15px] h-[15px] rounded-full overflow-hidden border-dark-grey">
               <img src={ProfilePicture} alt="" />
             </div>
-            <Link to="/engineerprofile">
-              <p className=" font-semibold text-blue">Divine Orji</p>
-            </Link>
-          </div>
-          <div className=" flex items-center gap-2 cursor-pointer">
+            <p className=" font-semibold text-blue">Shell SPDC</p>
+          </Link>
+          <Link
+            to="/postjob"
+            className=" flex items-center gap-2 cursor-pointer"
+          >
             <FontAwesomeIcon icon={faBriefcase} className=" text-dark-grey" />
-            {/* <Link to=''> */}
-            <p className=" font-semibold text-blue">My Jobs</p>
-            {/* </Link> */}
-          </div>
-          <div className=" flex items-center gap-2 cursor-pointer">
+            <p className=" font-semibold text-blue">Posted Jobs</p>
+          </Link>
+          <Link
+            to="/uploadpost"
+            className=" flex items-center gap-2 cursor-pointer"
+          >
+            <FontAwesomeIcon icon={faTent} className="text-dark-grey" />
+            <p className=" font-semibold text-blue">Post Event</p>
+          </Link>
+          <Link className=" flex items-center gap-2 cursor-pointer">
             <FontAwesomeIcon icon={faGear} className="text-dark-grey" />
-            <p className=" font-semibold">Settings</p>
+            <p className=" font-semibold text-blue">Settings</p>
+          </Link>
+          <div className=" flex items-center gap-2 cursor-pointer">
+            <p>
+              Switch to <Link className=" text-orange">Personal Profile</Link>
+            </p>
           </div>
         </div>
       </div>
@@ -147,17 +170,23 @@ const Nav = () => {
               /> */}
               <p className=" text-white">Notifications</p>
             </div>
-            <Link to="/engineerprofile" className=" flex gap-2 items-center">
+            <Link to="" className=" flex gap-2 items-center">
               {/* <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
                 <img src={ProfilePicture} alt="" />
               </div> */}
-              <p>Profile</p>
+              <p>Shell SPDC</p>
             </Link>
             <Link to="" className=" flex gap-2 items-center">
               {/* <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
                 <img src={ProfilePicture} alt="" />
               </div> */}
-              <p>My Jobs</p>
+              <p>Posted Jobs</p>
+            </Link>
+            <Link to="" className=" flex gap-2 items-center">
+              {/* <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
+                <img src={ProfilePicture} alt="" />
+              </div> */}
+              <p>Post Event</p>
             </Link>
             <Link to="" className=" flex gap-2 items-center">
               {/* <div className=" w-[30px] h-[30px] rounded-full overflow-hidden border-white border-2">
@@ -165,6 +194,7 @@ const Nav = () => {
               </div> */}
               <p>Settings</p>
             </Link>
+            <p className=" text-white">Switch to <Link className=" text-orange">Personal Account</Link> </p>
           </div>
         </div>
 

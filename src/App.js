@@ -12,6 +12,7 @@ import PostJobPage from './pages/PostJobPage'
 import FindJobPage from './pages/FindJobPage'
 import EngineerProfile from "./pages/EngineerProfile";
 import ProfileDetail from "./pages/ProfileDetail";
+import UploadPost from './pages/UploadPost'
 
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
           <Route path="/postjob" element={<PostJobPage/>}/>
           <Route path="/findjob" element={<FindJobPage/>}/>
           <Route path="/engineerprofile" element={<EngineerProfile />} />
-          <Route path="/profiledetail" element={<ProfileDetail/>} />
+          <Route path="/profiledetail" element={<ProfileDetail />} />
+          <Route path="/uploadpost" element={<UploadPost/>}/>
         </Routes>
       </Router>
     </>

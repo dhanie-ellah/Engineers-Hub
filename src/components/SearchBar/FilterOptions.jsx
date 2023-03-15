@@ -17,7 +17,7 @@ const FilterOptions = ({ isOpen, setIsOpen }) => {
             icon={faClose}
             className=" text-blue text-2xl cursor-pointer lg:text-xl"
             onClick={() => {
-              setIsOpen(true)
+              setIsOpen(false);
             }}
           />
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../components/nav/NavActive'
+import NavBar from '../components/nav/CompanyNav'
 import Footer from '../components/Footer'
 import PostJobBody from '../components/PostJobs/PostJobBody'
 
