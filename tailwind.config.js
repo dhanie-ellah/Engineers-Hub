@@ -40,5 +40,6 @@ module.exports = {
 			// => @media (max-width: 639px) { ... }
 		},
   },
-  plugins: [],
+  // plugins: [require("@tailwindcss/forms")],
+  // "@tailwindcss/forms": "^0.5.3",
 }

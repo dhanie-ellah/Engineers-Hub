@@ -18,17 +18,17 @@ const ProfilePicture = () => {
           className="text-4xl fill-grey text-grey"
         />
       </div>
-      <button className="w-full bg-orange rounded-full p-2 text-xs cursor-pointer text-center">
+      <button className="w-full bg-orange rounded-full p-2 text-xs text-white cursor-pointer text-center">
         Take a selfie
       </button>
       <label
         htmlFor="import"
-        className="w-full bg-orange rounded-full p-2 text-xs cursor-pointer text-center"
+        className="w-full bg-orange rounded-full p-2 text-xs text-white cursor-pointer text-center"
       >
         Import from Gallery
       </label>
-      <input type="file" id="import" className=' hidden'/>
-      <Link className=' text-center text-black text-xs'>Skip</Link>
+      <input type="file" id="import" className=" hidden" />
+      <Link className=" text-center text-black text-xs">Skip</Link>
     </form>
   );
 }

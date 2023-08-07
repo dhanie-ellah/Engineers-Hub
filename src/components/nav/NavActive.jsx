@@ -77,7 +77,7 @@ const Nav = () => {
             <div className=" w-[20px] h-[20px] rounded-full overflow-hidden border-dark-grey">
               <img src={ProfilePicture} alt="" />
             </div>
-            <Link to="/engineerprofile">
+            <Link to="/profiledetail">
               <p className=" font-semibold text-blue">Divine Orji</p>
             </Link>
           </div>
@@ -89,7 +89,9 @@ const Nav = () => {
           </div>
           <div className=" flex items-center gap-2 cursor-pointer">
             <FontAwesomeIcon icon={faGear} className="text-dark-grey" />
-            <p className=" font-semibold">Settings</p>
+            <Link to="/engineerprofile" className=" font-semibold text-blue">
+              Settings
+            </Link>
           </div>
         </div>
       </div>

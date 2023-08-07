@@ -11,7 +11,7 @@ const Textbox = ({ placeholder, label, id }) => {
         rows="5"
         placeholder={placeholder}
         id={id}
-        className=" w-full border-[1.5px] border-dark-grey rounded-lg mt-1 placeholder:text-blue placeholder:text-xs px-5 py-4 outline-none text-dark-grey resize-none"
+        className=" w-full border-[1.5px] border-dark-grey rounded-lg mt-1 placeholder:text-blue placeholder:text-xs placeholder:text-dark-grey px-5 py-4 outline-none text-dark-grey resize-none"
       ></textarea>
     </div>
   );
