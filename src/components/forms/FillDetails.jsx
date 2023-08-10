@@ -29,7 +29,7 @@ const FillDetails = ({register, setRegister, setPage, signUp1}) => {
       className="border-2 border-grey rounded-2xl w-2/6 m-auto p-5 px-14 my-5 flex flex-col gap-4 md:w-11/12 md:px-5 lg:w-3/5"
       onSubmit={(e) => {
         e.preventDefault();
-        signup();
+        // signup();
         Navigate("/confirmMail");
       }}
     >
