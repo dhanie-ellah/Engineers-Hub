@@ -1,36 +1,77 @@
-import React, { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import UserIcon from '../../assets/user-icon.png'
-import InputField from '../InputField'
-import SubmitBtn from '../SubmitBtn'
-import supabase from '../../Config/supabase'
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import UserIcon from "../../assets/user-icon.png";
+import InputField from "../InputField";
+import SubmitBtn from "../SubmitBtn";
+import supabase from "../../Config/supabase";
+import { useParams } from "react-router-dom";
+import {
+  updateDetails,
+  updateuserPublic,
+} from "../../service/user_service/update_details_service";
+import { connect } from "react-redux";
+import { User } from "../../redux/state/action";
 
-const FillDetails = ({register, setRegister, setPage, signUp1}) => {
+const FillDetails = ({ loginUser, appState }) => {
+  const User = appState.userData;
   const Navigate = useNavigate();
+  const [register, setRegister] = useState({});
+  const [userData, setUserData] = useState();
 
-  const supabaseConnect = supabase()
+  const [setPage, signUp1] = useState({});
 
-  const signup = () => {
-    console.log('start')
-    supabaseConnect
-      .from("Register Table")
-      .insert({
-        first_name: register.first_name,
-        middle_name: register.middle_name,
-        last_name: register.last_name,
-        country: register.country,
-        city: register.city,
+  const supabaseConnect = supabase();
+
+  function updateDetailsController() {
+    console.log("loading");
+    let data = {
+      firstname: register.first_name,
+      lastname: register.last_name,
+      phone: register.phone,
+      country: register.country,
+      city: register.city,
+    };
+
+    updateDetails(data)
+      .then((response) => {
+        if (response.error) {
+          // handle error
+          //  return false
+        }
+        updateuserPublic({ data, email: User.email }).then((response2) => {
+          if (response2.error) {
+            // handle error
+            //  return false
+          }
+
+          // prepare a payload
+          let userPayload = {
+            ...response.data.user.user_metadata,
+            uuid: response.data.user.id,
+            email: response.data.user.email,
+            profileUpdated: true,
+            joined: response.data.user.created_at,
+          };
+          loginUser(userPayload);
+          Navigate("/engineerprofile");
+        });
+      })
+      .catch((error) => {
+        console.log(error);
       });
-    console.log('end')
   }
+
+  React.useEffect(() => {
+    console.log(User);
+  }, []);
 
   return (
     <form
       className="border-2 border-grey rounded-2xl w-2/6 m-auto p-5 px-14 my-5 flex flex-col gap-4 md:w-11/12 md:px-5 lg:w-3/5"
       onSubmit={(e) => {
         e.preventDefault();
-        // signup();
-        Navigate("/confirmMail");
+        updateDetailsController();
+        // Navigate("/confirmMail");
       }}
     >
       <div className="flex justify-center">
@@ -52,19 +93,7 @@ const FillDetails = ({register, setRegister, setPage, signUp1}) => {
           });
         }}
       />
-      {/* middle_name */}
-      <InputField
-        placeholder="Middle Name"
-        input_type="text"
-        name="middle_name"
-        value={register.middle_name}
-        onchange={(e) => {
-          setRegister({
-            ...register,
-            middle_name: e.target.value,
-          });
-        }}
-      />
+
       {/* last_name */}
       <InputField
         placeholder="Last Name"
@@ -78,6 +107,21 @@ const FillDetails = ({register, setRegister, setPage, signUp1}) => {
           });
         }}
       />
+
+      {/* middle_name */}
+      <InputField
+        placeholder="Phone number"
+        input_type="numeric"
+        name="phone"
+        value={register.phone}
+        onchange={(e) => {
+          setRegister({
+            ...register,
+            phone: e.target.value,
+          });
+        }}
+      />
+
       {/* country */}
       <InputField
         placeholder="Country"
@@ -115,6 +159,18 @@ const FillDetails = ({register, setRegister, setPage, signUp1}) => {
       </h1>
     </form>
   );
-}
+};
 
-export default FillDetails
+const mapStateToProps = (state) => {
+  return {
+    appState: state.user,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    // dispatching plain actions
+    loginUser: (payload) => dispatch(User(payload)),
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(FillDetails);
